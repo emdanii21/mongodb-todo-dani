@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.2/axios.min.js"></script>
 </head>
 
 <body>
@@ -24,7 +24,7 @@
         function postTodo() {
             let todoText = document.querySelector("#todo").value
 
-            axios.post(`http://localhost:3000/todo`, {
+            axios.post(`https://pear-elated-betta.cyclic.app/todo`, {
                 text: todoText
             })
                 .then(function (response) {
@@ -45,7 +45,7 @@
         }
 
         function getAllTodos() {
-            axios.get(`http://localhost:3000/todos`)
+            axios.get(`https://pear-elated-betta.cyclic.app/todos`)
                 .then(function (response) {
                     console.log(response.data);
 
